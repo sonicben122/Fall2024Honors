@@ -1,3 +1,3 @@
 ## Overview
 
-This is my cs honors project
+This is my computer science honors project
