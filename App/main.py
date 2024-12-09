@@ -2,6 +2,7 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
+from kivy.uix.label import Label
 import requests
 
 #steam api
@@ -34,15 +35,21 @@ if cs2_info:
 class BoxLayoutExample(BoxLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        l1 = Label(text="CS2 Updates", size_hint=(1, .5))
         b1 = Button(text=str(latestupdatetitle))
+        b2 = Button(text=str(update2title))
+        b3 = Button(text=str(update3title))
+        self.add_widget(l1)
         self.add_widget(b1)
+        self.add_widget(b2)
+        self.add_widget(b3)
 
 class MainWidget(Widget):
     pass
 
 
-class ClassView(App):
+class CS2UpdateApp(App):
     pass
 
 
-ClassView().run()
+CS2UpdateApp().run()
