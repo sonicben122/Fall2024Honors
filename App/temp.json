@@ -1,0 +1,56 @@
+{
+    "appnews": {
+        "appid": 730,
+        "newsitems": [
+            {
+                "gid": "1784506359188355",
+                "title": "Counter-Strike 2 Update",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1784506359188355",
+                "is_external_url": true,
+                "author": "Vitaliy",
+                "contents": "Updated MIBR player sticker items autographed by Lucaozy with the autographs of brnz4n. Fixed a UI bug that allowed dropping Pick'Em team logos outside of Major Pick'Em hub using both mouse buttons. Pick'Em challenge picks can now be placed for the upcoming Elimination Stage of Shanghai Major. Predi...",
+                "feedlabel": "Community Announcements",
+                "date": 1733260779,
+                "feedname": "steam_community_announcements",
+                "feed_type": 1,
+                "appid": 730,
+                "tags": [
+                    "patchnotes",
+                    "mod_reviewed",
+                    "ModAct_487176015_1733261066_0",
+                    "mod_require_rereview"
+                ]
+            },
+            {
+                "gid": "1784506358992443",
+                "title": "Shanghai 2024 Major",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1784506358992443",
+                "is_external_url": true,
+                "author": "Gautam",
+                "contents": "The Counter-Strike Major has come to Shanghai. Over the past month, teams from around the world challenged the best in their region for their spot in the Major. Now the dust has settled and 24 teams remain--perennial favorites, seasoned veterans, and more than a few newcomers. https://clan.fastly.st...",
+                "feedlabel": "Community Announcements",
+                "date": 1732746562,
+                "feedname": "steam_community_announcements",
+                "feed_type": 1,
+                "appid": 730
+            },
+            {
+                "gid": "1784506358992440",
+                "title": "Counter-Strike 2 Update",
+                "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1784506358992440",
+                "is_external_url": true,
+                "author": "Piggles ULTRAPRO",
+                "contents": "The Shanghai Major Hub is now available. Visit the hub to purchase tournament items, play the Pick'Em Challenge and more. Purchase a Shanghai 2024 Viewer Pass to receive an upgradable Shanghai 2024 Coin. With an active pass, you can upgrade your coin and earn extra souvenir packages by playing the P...",
+                "feedlabel": "Community Announcements",
+                "date": 1732746538,
+                "feedname": "steam_community_announcements",
+                "feed_type": 1,
+                "appid": 730,
+                "tags": [
+                    "patchnotes"
+                ]
+            }
+        ],
+        "count": 1606
+    }
+}

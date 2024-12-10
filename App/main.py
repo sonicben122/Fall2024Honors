@@ -4,7 +4,8 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 import requests
-import urllib.request
+import webbrowser
+
 
 #steam api
 base_url = "http://api.steampowered.com"
@@ -28,33 +29,42 @@ if cs2_info:
     update2 = newsitems[1]
     update3 = newsitems[2]
 
+    #title
     latestupdatetitle = latestupdate["title"]
     update2title = update2["title"]
     update3title = update3["title"]
+    #url
+    latestupdateurl = latestupdate["url"]
+    update2url = latestupdate["url"]
+    update3url = latestupdate["url"]
 
+
+#Def what button dose
 def callback(instance):
-    print('The button <%s> is being pressed' % instance.text)
-    if instance == :
-        
-    
+    print('The button1 <%s> is being pressed' % instance.text)
+    webbrowser.open(latestupdateurl)
+def callback2(instance):
+    print('The button2 <%s> is being pressed' % instance.text)
+    webbrowser.open(update2url)
+def callback3(instance):
+    print('The button3 <%s> is being pressed' % instance.text)
+    webbrowser.open(update3url)
 
-    # urllib.request.urlopen('https://www.javatpoint.com/python-tutorial')  
 
 
 
 class BoxLayoutExample(BoxLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        l1 = Label(text="CS2 Updates", size_hint=(1, .5))
         b1 = Button(text=str(latestupdatetitle))
         b2 = Button(text=str(update2title))
         b3 = Button(text=str(update3title))
-        self.add_widget(l1)
         self.add_widget(b1)
         self.add_widget(b2)
         self.add_widget(b3)
         b1.bind(on_press=callback)
-        b2.bind(on_press=callback)
+        b2.bind(on_press=callback2)
+        b3.bind(on_press=callback3)
 
 class MainWidget(Widget):
     pass
@@ -63,5 +73,5 @@ class MainWidget(Widget):
 class CS2UpdateApp(App):
     pass
 
-
-CS2UpdateApp().run()
+if __name__ == "__main__":
+    CS2UpdateApp().run()
