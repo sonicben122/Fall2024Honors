@@ -4,6 +4,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 import requests
+import urllib.request
 
 #steam api
 base_url = "http://api.steampowered.com"
@@ -31,6 +32,15 @@ if cs2_info:
     update2title = update2["title"]
     update3title = update3["title"]
 
+def callback(instance):
+    print('The button <%s> is being pressed' % instance.text)
+    if instance == :
+        
+    
+
+    # urllib.request.urlopen('https://www.javatpoint.com/python-tutorial')  
+
+
 
 class BoxLayoutExample(BoxLayout):
     def __init__(self, **kwargs):
@@ -43,6 +53,8 @@ class BoxLayoutExample(BoxLayout):
         self.add_widget(b1)
         self.add_widget(b2)
         self.add_widget(b3)
+        b1.bind(on_press=callback)
+        b2.bind(on_press=callback)
 
 class MainWidget(Widget):
     pass
