@@ -35,20 +35,20 @@ if cs2_info:
     update3title = update3["title"]
     #url
     latestupdateurl = latestupdate["url"]
-    update2url = latestupdate["url"]
-    update3url = latestupdate["url"]
+    update2url = update2["url"]
+    update3url = update3["url"]
 
 
-#Def what button dose
-def callback(instance):
-    print('The button1 <%s> is being pressed' % instance.text)
-    webbrowser.open(latestupdateurl)
-def callback2(instance):
-    print('The button2 <%s> is being pressed' % instance.text)
-    webbrowser.open(update2url)
-def callback3(instance):
-    print('The button3 <%s> is being pressed' % instance.text)
-    webbrowser.open(update3url)
+    #Def what button dose
+    def callback(instance):
+        print('The button1 <%s> is being pressed' % instance.text)
+        webbrowser.open(latestupdateurl)
+    def callback2(instance):
+        print('The button2 <%s> is being pressed' % instance.text)
+        webbrowser.open(update2url)
+    def callback3(instance):
+        print('The button3 <%s> is being pressed' % instance.text)
+        webbrowser.open(update3url)
 
 
 
@@ -56,15 +56,19 @@ def callback3(instance):
 class BoxLayoutExample(BoxLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        b1 = Button(text=str(latestupdatetitle))
-        b2 = Button(text=str(update2title))
-        b3 = Button(text=str(update3title))
-        self.add_widget(b1)
-        self.add_widget(b2)
-        self.add_widget(b3)
-        b1.bind(on_press=callback)
-        b2.bind(on_press=callback2)
-        b3.bind(on_press=callback3)
+        if cs2_info:
+            b1 = Button(text=str(latestupdatetitle))
+            b2 = Button(text=str(update2title))
+            b3 = Button(text=str(update3title))
+            self.add_widget(b1)
+            self.add_widget(b2)
+            self.add_widget(b3)
+            b1.bind(on_press=callback)
+            b2.bind(on_press=callback2)
+            b3.bind(on_press=callback3)
+        else:
+            le = Label(text="Can't reach site")
+            self.add_widget(le)
 
 class MainWidget(Widget):
     pass
