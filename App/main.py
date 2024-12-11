@@ -8,7 +8,7 @@ import webbrowser
 from kivy.core.window import Window
 
 
-#steam api
+#gets news feeds from the steam api
 base_url = "http://api.steampowered.com"
 
 def get_cs2_news():
@@ -24,6 +24,7 @@ def get_cs2_news():
 cs2_info = get_cs2_news()
 
 if cs2_info:
+    #seperate the news items into there own veriables
     appnews = cs2_info["appnews"]
     newsitems = appnews["newsitems"]
     latestupdate = newsitems[0]
@@ -31,12 +32,12 @@ if cs2_info:
     update3 = newsitems[2]
     update4 = newsitems[3]
 
-    #title
+    #finds the titles in the json file
     latestupdatetitle = latestupdate["title"]
     update2title = update2["title"]
     update3title = update3["title"]
     update4title = update4["title"]
-    #url
+    #find urls in the json file
     latestupdateurl = latestupdate["url"]
     update2url = update2["url"]
     update3url = update3["url"]
@@ -70,7 +71,7 @@ class BoxLayoutExample(BoxLayout):
             b2 = Button(text="Second Update: " + str(update2title))
             b3 = Button(text="Third Update: " + str(update3title))
             b4 = Button(text="Forth Update: " + str(update4title))
-            #adds them to widget
+            #adds them to BoxLayout Example
             self.add_widget(l1)
             self.add_widget(b1)
             self.add_widget(b2)
@@ -85,9 +86,6 @@ class BoxLayoutExample(BoxLayout):
         else:
             le = Label(text="Can't reach site")
             self.add_widget(le)
-
-class MainWidget(Widget):
-    pass
 
 
 class CS2UpdateApp(App):
