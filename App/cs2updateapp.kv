@@ -2,22 +2,10 @@
 BoxLayoutExample:
 
 #background color
-<BackgroundColor@Widget>
-    background_color: 1, 1, 1, 1
-    canvas.before:
-        Color:
-            rgba: root.background_color
-        Rectangle:
-            size: self.size
-            pos: self.pos
-<BackgroundLabel@Label+BackgroundColor>
-    background_color: 0, 0, 0, 0
+
 
 <BoxLayoutExample>:
     orientation: "vertical"
-    BackgroundLabel:
-        text: "Counter Strick Update Checker"
-        background_color: 1, 0, 0, 1
 
 <MainWidget>:
     Button:
@@ -25,6 +13,7 @@ BoxLayoutExample:
         size: "400dp", "200dp"
         pos: "100dp", "200dp"
         color: 0, 0, 1, 1
+        pos_hint: "1",
     Label:
         text: "Hello"
         size: "150dp", "100dp"
