@@ -94,6 +94,7 @@ class CS2UpdateApp(App):
     def build(self):
         #defins background color
         Window.clearcolor = (1, .647, 0)
+        self.icon='st,small,507x507-pad,600x600,f8f8f8.jpg'
         return super().build()
 
 if __name__ == "__main__":
